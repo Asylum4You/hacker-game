@@ -1,0 +1,98 @@
+.cluster-menu {
+    border-bottom: 1px #ccc solid;
+    display: flex;
+    height: 50px;
+    justify-content: space-between;
+    margin: 0;
+    margin-left: 275px;
+    overflow: hidden;
+    padding: 0;
+    position: relative;
+    vertical-align: top;
+}
+
+.cluster-menu-option-selected,
+.cluster-menu-option {
+    color: #ccc;
+    font-size: 18px;
+    margin-left: 16px;
+    margin-right: 16px;
+    padding: 16px;
+}
+
+.cluster-menu-option-selected {
+    background-color: #ccc;
+    color: #222;
+    cursor: default;
+}
+
+.cluster-menu-option:hover {
+    background-color: #444;
+    cursor: pointer;
+}
+
+.cluster-menu-option:active {
+    background-color: #666;
+    cursor: pointer;
+}
+
+.cluster-menu-option-selected:hover {
+    cursor: pointer;
+}
+
+.cluster-menu-option-edge {
+    margin-left: 16px;
+    margin-right: 16px;
+    padding: 16px;
+}
+
+.container {
+    margin-top: 50px;
+}
+
+.sidebar {
+    bottom: 0;
+    border-right: 1px #ccc solid;
+    float: left;
+    font-size: 16px;
+    margin: 0;
+    margin-top: 50px;
+    overflow-y: scroll;
+    padding: 0;
+    position: fixed;
+    top: 0;
+    width: 275px;
+}
+
+.sidebar-option-selected,
+.sidebar-option {
+    margin-bottom: 16px;
+    margin-top: 16px;
+    padding: 8px;
+    padding-left: 16px;
+    padding-right: 16px;
+}
+
+.sidebar-option-selected {
+    background-color: #ccc;
+    color: #222;
+    cursor: default;
+}
+
+.sidebar-option-title {
+    margin-bottom: 8px;
+}
+
+.sidebar-option:hover {
+    background-color: #444;
+    cursor: pointer;
+}
+
+.sidebar-option:active {
+    background-color: #666;
+    cursor: pointer;
+}
+
+.content {
+    margin-left: 275px;
+}

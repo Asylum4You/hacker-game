@@ -1,0 +1,195 @@
+<!--
+Hey there! Welcome to this game's front-end source code.
+
+Know what all (or some) the code below means?
+
+If so, we'd love for YOU to help contribute to the game.
+
+Want to make a new front-end? Fix up the back-end? Find some bugs and (hopefully) report them?
+
+Join the official game development chat over at {DISCORD LINK},
+
+or take a look at the full code at {GITHUB LINK}.
+-->
+<!doctype html>
+<html lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="stylesheet" href="css/reset-min.css">
+    <link rel="stylesheet" href='css/font.css'>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/cluster.css">
+    <link rel="stylesheet" href="css/hardware.css">
+    <link rel="stylesheet" href="css/processes.css">
+    <link rel="stylesheet" href="css/software.css">
+    <title>RAW</title>
+    <style></style>
+</head>
+
+<body>
+    <div class="main-menu">
+        <div class="main-menu-option">News</div>
+        <div class="main-menu-option-selected">Hack</div>
+        <div class="main-menu-option">E-Mail</div>
+        <div class="main-menu-option">Finances</div>
+        <div class="main-menu-option">Database</div>
+        <div class="main-menu-option">Clan</div>
+        <div class="main-menu-option">Leaderboards</div>
+        <div class="main-menu-option">Profile</div>
+    </div>
+    <div class="container">
+        <ul class="sidebar">
+            <li class="sidebar-option">
+                <div class="sidebar-option-title">Cluster first:</div>
+                IP: ff:ff:ff:ff:ff:ff:ff:ff
+                <br>CPU: 12000 MHz
+                <br>Memory: 24000 MB
+                <br>Disk: 300 GB</li>
+            <li class="sidebar-option-selected">
+                <div class="sidebar-option-title">Cluster 2</div>
+                IP: ff:ff:ff:ff:ff:ff:ff:00
+                <br>CPU: 6000 MHz
+                <br>Memory: 12000 MB
+                <br>Disk: 150 GB</li>
+            <li class="sidebar-option">
+                <div class="sidebar-option-title">Cluster 3</div>
+                IP: ff:ff:ff:ff:ff:ff:ff:00
+                <br>CPU: 6000 MHz
+                <br>Memory: 12000 MB
+                <br>Disk: 150 GB</li>
+            <li class="sidebar-option">
+                <div class="sidebar-option-title">Cluster 4</div>
+                IP: ff:ff:ff:ff:ff:ff:ff:00
+                <br>CPU: 6000 MHz
+                <br>Memory: 12000 MB
+                <br>Disk: 150 GB</li>
+            <li class="sidebar-option">
+                <div class="sidebar-option-title">Cluster 5</div>
+                IP: ff:ff:ff:ff:ff:ff:ff:00
+                <br>CPU: 6000 MHz
+                <br>Memory: 12000 MB
+                <br>Disk: 150 GB</li>
+            <li class="sidebar-option">
+                <div class="sidebar-option-title">Cluster 6</div>
+                IP: ff:ff:ff:ff:ff:ff:ff:00
+                <br>CPU: 6000 MHz
+                <br>Memory: 12000 MB
+                <br>Disk: 150 GB</li>
+            <li class="sidebar-option">
+                <div class="sidebar-option-title">Cluster 7</div>
+                IP: ff:ff:ff:ff:ff:ff:ff:00
+                <br>CPU: 6000 MHz
+                <br>Memory: 12000 MB
+                <br>Disk: 150 GB</li>
+            <li class="sidebar-option">
+                <div class="sidebar-option-title">Cluster last</div>
+                IP: ff:ff:ff:ff:ff:ff:ff:00
+                <br>CPU: 6000 MHz
+                <br>Memory: 12000 MB
+                <br>Disk: 150 GB</li>
+            <li class="sidebar-option">
+                <div class="sidebar-option-title">ADD NEW CLUSTER</div>
+                IP: -
+                <br>CPU: -
+                <br>Memory: -
+                <br>Disk: -</li>
+        </ul>
+        <div id="cluster-menu" class="cluster-menu">
+            <div class="cluster-menu-option-edge"></div>
+            <div id="cluster-menu-option-hardware" class="cluster-menu-option">Hardware</div>
+            <div id="cluster-menu-option-software" class="cluster-menu-option">Software</div>
+            <div id="cluster-menu-option-processes" class="cluster-menu-option-selected">Processes</div>
+            <div id="cluster-menu-option-internet" class="cluster-menu-option">Internet</div>
+            <div class="cluster-menu-option-edge"></div>
+        </div>
+        <div id="content" class="content">
+            <table class="processes">
+                <tr class="processes-row">
+                    <td class="processes-cell">Processes</td>
+                    <td class="processes-cell">Progress</td>
+                    <td class="processes-cell">Time Remaining</td>
+                    <td class="processes-cell">Actions</td>
+                </tr>
+                <tr class="processes-row">
+                    <td class="processes-cell">Delete file adsf.exp at ff:ff:ff:ff:ff:ff:00:00</td>
+                    <td class="processes-cell">100%</td>
+                    <td class="processes-cell">0 seconds</td>
+                    <td class="processes-cell">
+                        <div class="process-cell-action"><img src="res/img/run.png">
+                            <div class="cell-action-tooltip-text">Complete</div>
+                        </div>
+                        <div class="process-cell-action"><img src="res/img/cancel.png">
+                            <div class="cell-action-tooltip-text">Cancel</div>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <script src="js/jquery-min.js"></script>
+    <script>
+        (function() {
+            var main_menu_selected = 2;
+            /*
+             * main_menu_selected values:
+             * 0: Not Selected
+             * 1: News
+             * 2: Hack
+             * 3: E-Mail
+             * 4: Finances
+             * 5: Database
+             * 6: Clan
+             * 7: Leaderboards
+             * 8: Profile
+             */
+
+            var cluster_menu_selected = 3;
+            /*
+             * cluster_menu_selected values:
+             * 0: Not Selected
+             * 1: Hardware
+             * 2: Software
+             * 3: Processes
+             * 4: Internet
+             */
+
+            function ajax(url) {
+                var xhttp = new XMLHttpRequest();
+                xhttp.onreadystatechange = function() {
+                    if (xhttp.readyState == 4 && xhttp.status == 200) {
+                        return xhttp.responseText;
+                    }
+                };
+                xhttp.open("GET", "ajax_info.txt", true);
+                xhttp.send();
+            }
+
+            $("#cluster-menu").on('click', "#cluster-menu-option-hardware", function() {
+                $("#content").html("hardware");
+                cluster_menu_selected = 1;
+            });
+
+            $("#cluster-menu").on('click', "#cluster-menu-option-software", function() {
+                $("#content").html("software");
+                cluster_menu_selected = 2;
+            });
+
+            $("#cluster-menu").on('click', "#cluster-menu-option-processes", function() {
+                $("#content").html("processes");
+                cluster_menu_selected = 3;
+            });
+
+            $("#cluster-menu").on('click', "#cluster-menu-option-internet", function() {
+                $("#content").html("internet");
+                cluster_menu_selected = 4;
+            });
+        })();
+    </script>
+</body>
+
+</html>

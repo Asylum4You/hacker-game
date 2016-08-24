@@ -132,64 +132,7 @@ or take a look at the full code at {GITHUB LINK}.
         </div>
     </div>
     <script src="js/jquery-min.js"></script>
-    <script>
-        (function() {
-            var main_menu_selected = 2;
-            /*
-             * main_menu_selected values:
-             * 0: Not Selected
-             * 1: News
-             * 2: Hack
-             * 3: E-Mail
-             * 4: Finances
-             * 5: Database
-             * 6: Clan
-             * 7: Leaderboards
-             * 8: Profile
-             */
-
-            var cluster_menu_selected = 3;
-            /*
-             * cluster_menu_selected values:
-             * 0: Not Selected
-             * 1: Hardware
-             * 2: Software
-             * 3: Processes
-             * 4: Internet
-             */
-
-            function ajax(url) {
-                var xhttp = new XMLHttpRequest();
-                xhttp.onreadystatechange = function() {
-                    if (xhttp.readyState == 4 && xhttp.status == 200) {
-                        return xhttp.responseText;
-                    }
-                };
-                xhttp.open("GET", "ajax_info.txt", true);
-                xhttp.send();
-            }
-
-            $("#cluster-menu").on('click', "#cluster-menu-option-hardware", function() {
-                $("#content").html("hardware");
-                cluster_menu_selected = 1;
-            });
-
-            $("#cluster-menu").on('click', "#cluster-menu-option-software", function() {
-                $("#content").html("software");
-                cluster_menu_selected = 2;
-            });
-
-            $("#cluster-menu").on('click', "#cluster-menu-option-processes", function() {
-                $("#content").html("processes");
-                cluster_menu_selected = 3;
-            });
-
-            $("#cluster-menu").on('click', "#cluster-menu-option-internet", function() {
-                $("#content").html("internet");
-                cluster_menu_selected = 4;
-            });
-        })();
-    </script>
+    <script src="js/main.js"></script>
 </body>
 
 </html>

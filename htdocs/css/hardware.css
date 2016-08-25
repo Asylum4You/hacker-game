@@ -2,6 +2,7 @@
     display: inline-block;
     border: 1px #ccc solid;
     width: 275px;
+    vertical-align: top;
     margin: 16px;
     padding: 16px;
 }

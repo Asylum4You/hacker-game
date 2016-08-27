@@ -1,0 +1,148 @@
+Basic Game Mechanics
+    Hardware:
+        Cluster:
+            Notes:
+                Group of one or more servers.
+                Independent from any other clusters.
+                A player may own any number of clusters.
+                Location of cluster determines maximum number of servers.
+                Cluster specs are cummulative of all the servers that compose it.
+                Internet/Network specs are per cluster.
+            Locations:
+                Default:
+                    Name:
+                    
+                    Maximum server amount:
+                    
+                Location 1:
+                    Name:
+                        
+                    Maximum server amount:
+                        
+        Server:
+            Notes:
+                A group of servers comprises a cluster.
+                Upgradable unit.
+                Servers cannot be moved between clusters.
+                Parts: CPU, Memory, Storage.
+            Upgrades:
+                CPU:
+                    Default:
+                        Name:
+                            
+                        Price:
+                            
+                        Speed:
+                            
+                    Upgrade 1:
+                        Name:
+                            
+                        Price:
+                            
+                        Speed:
+                            
+                Memory:
+                    Default:
+                        Name:
+                            
+                        Price:
+                            
+                        Speed:
+                            
+                    Upgrade 1:
+                        Name:
+                            
+                        Price:
+                            
+                        Speed:
+                            
+                Harddrive:
+                    Default:
+                        Name:
+                            
+                        Price:
+                            
+                        Speed:
+                            
+                    Upgrade 1:
+                        Name:
+                            
+                        Price:
+                            
+                        Speed:
+                            
+    Files:
+        Exploit Kit:
+            Notes:
+                Hacks access into cluster with active firewall that is lower level than exploit kit.
+        Cracker:
+            Notes:
+                Hacks access, and gives cluster password, of server with encrypter that is lower level than cracker.
+                Get decryption code of file that is encrypted by crypter that is lower level than the cracker.
+                Crack Proxy malware proxy code.
+                Multi-usage -- Take (much) longer as penalty?
+		When hacking, notify victim of hack in progress.
+        Firewall:
+            Notes:
+                Prevents access to cluster by use of exploit kit that is lower level than firewall.
+        Crypter:
+            Notes:
+                Prevents access to cluster by use of cracker that is lower level than Crypter.
+        Scanner:
+            Notes:
+                Gives cluster specs of cluster that user has access to.
+		Shows accesses to cluster that user has access to.
+                Shows proxy connections of a cluster.
+        Activators:
+            Collector Activator:
+                Notes:
+                    Gives money earned from Miner and Spam malwares.
+            DDoS Activator:
+                Notes:
+                    Allows user to launch DDoS attacks from DDoS malwares.
+            Proxy Activator:
+                Notes:
+                    Allows user to use clusters with proxy malwares as proxy server.
+        Miner Malware:
+        Spam Malware:
+        DDoS Malware:
+        Proxy Malware:
+        Anti-Malware:
+            Notes:
+                Removes malware that is lower level than anti-malware.
+                Quickly remove malware with removal code.
+Other Mechanics:
+    Logs:
+        Anytime a cluster performs an action, or has an action performed on it, the log file will be changed to reflect that.
+        Log file cannot be encrypted.
+    Password File:
+        Each cluster has a password file that is encrypted automatically with the highest crypter.
+        If anyone gets the unencrypted password, they can use it to get access into servers.
+        Password file cannot be deleted.
+        Password file cannot be manually encrypted.
+    Database File:
+        Every bank account or cluster that the cluster has hacked, along with the password, if any, will be added into the database file.
+        Every malware that the cluster has installed, the removal code will be added into the database file.
+        The Database File is automatically encrypted with the highest crypter.
+        Fo all encryptions performed by the player, the decryption code will be in the database file.
+        If anyone gets the unencrypted database, they can import it into their own.
+        Database file cannot be deleted.
+        Database file cannot be manually encrypted.
+    Proxy Server:
+        When a player has a proxy malware installed on a cluster, they can use the proxy malware's proxy code to cause that server to act as a proxy.
+    Malware Installation:
+        When a player installs a malware, they will recieve a removal code that can be used to remove the malware.
+    Malware Removal:
+        A player can use a removal code to remove a malware.
+        A player can use an anti-malware to remove a malware.
+        A player can use an anti-malware with a removal code to quickly remove the malware.
+    Encyption:
+        A player can encrypt a file, rendering it unusable, and recieving a decryption code using a crypter.
+    Decryption:
+        A player can use a decryption code to invert the encryption, using a decryption code and a crypter.
+        A decryption code can be cracked by a cracker.
+    Process tasking:
+        Each action will take time to prepare, and when done, the next action in queue will begin to prepare.
+        When an action, or process, is prepared, the player can choose to activate it.
+        Each cluster will have its own queue.
+    

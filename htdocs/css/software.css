@@ -39,7 +39,7 @@
     padding: 8px;
 }
 
-.software-cell-action .cell-action-tooltip-text {
+.software-cell-action .software-cell-action-tooltip-text {
     pointer-events: none;
     visibility: hidden;
     width: 100px;
@@ -56,6 +56,6 @@
     margin-top: 4px;
 }
 
-.software-cell-action:hover .cell-action-tooltip-text  {
+.software-cell-action:hover .software-cell-action-tooltip-text  {
     visibility: visible;
 }

@@ -81,7 +81,7 @@ Basic Game Mechanics
                 Get decryption code of file that is encrypted by crypter that is lower level than the cracker.
                 Crack Proxy malware proxy code.
                 Multi-usage -- Take (much) longer as penalty?
-		When hacking, notify victim of hack in progress.
+		When hacking, notify victim of hack in progress in logs.
         Firewall:
             Notes:
                 Prevents access to cluster by use of exploit kit that is lower level than firewall.

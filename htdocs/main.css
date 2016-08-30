@@ -1,0 +1,52 @@
+body {
+    background-color: #222;
+    color: #ccc;
+    font-family: 'Inconsolata';
+}
+
+.main-menu {
+    background-color: #222;
+    border-bottom: 1px #ccc solid;
+    display: inline-block;
+    height: 50px;
+    position: fixed;
+    text-align: center;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+}
+
+.main-menu-option-selected,
+.main-menu-option {
+    color: #ccc;
+    display: inline-block;
+    font-size: 18px;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: 16px;
+}
+
+.main-menu-option-selected {
+    background-color: #ccc;
+    color: #222;
+    cursor: default;
+}
+
+.main-menu-option:hover {
+    background-color: #444;
+    cursor: pointer;
+}
+
+.main-menu-option:active {
+    background-color: #666;
+    cursor: pointer;
+}
+
+.button-normal {
+    font-size: 14px;
+    font-family: 'Inconsolata';
+    padding: 3px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+}
+

@@ -23,6 +23,7 @@
     width: 275px;
     margin: 16px;
     padding: 16px;
+    cursor: pointer;
 }
 
 .hardware-big-option:hover {

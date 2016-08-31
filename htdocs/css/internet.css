@@ -1,34 +1,55 @@
 .browser {
     border: 1px #ccc solid;
     width: 90%;
-    height: 700px;
     margin: 0 auto;
     margin-top: 16px;
-    padding: 16px;
     position: relative;
 
 }
 
 .browser-bar {
-    border: 1px #ccc solid;
-    width: 90%;
+    border-bottom: 1px #ccc solid;
     height: 20px;
     margin: 0 auto;
-    margin-top: 16px;
     padding: 16px;
     position: relative;
-
+    text-align: center;
 }
 
 .search-bar {
     text-align: center;
     margin-left: 10px;
-    font-size: 14px;
+    font-size: 16px;
     font-family: 'Inconsolata';
-    padding: 3px;
-    background-color: #fff;
+    padding: 4px;
+    background-color: #444;
     border: 1px solid #ccc;
+    color: #ccc;
+    width: 200px;
+}
 
+.search-bar:focus{
+    outline: none;
+}
+
+.search-bar-button {
+    font-size: 16px;
+    font-family: 'Inconsolata';
+    padding: 4px;
+    background-color: #222;
+    border: 1px solid #ccc;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.search-bar-button:hover {
+    font-size: 16px;
+    font-family: 'Inconsolata';
+    padding: 4px;
+    background-color: #444;
+    border: 1px solid #ccc;
+    display: inline-block;
+    cursor: pointer;
 }
 
 .internet-menu {
@@ -55,7 +76,7 @@
 .internet-menu-option-selected {
     background-color: #ccc;
     color: #222;
-    cursor: default;
+    cursor: pointer;
 }
 
 .internet-menu-option:hover {

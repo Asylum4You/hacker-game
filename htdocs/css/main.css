@@ -29,7 +29,7 @@ body {
 .main-menu-option-selected {
     background-color: #ccc;
     color: #222;
-    cursor: default;
+    cursor: pointer;
 }
 
 .main-menu-option:hover {
@@ -40,13 +40,5 @@ body {
 .main-menu-option:active {
     background-color: #666;
     cursor: pointer;
-}
-
-.button-normal {
-    font-size: 14px;
-    font-family: 'Inconsolata';
-    padding: 3px;
-    background-color: #fff;
-    border: 1px solid #ccc;
 }
 

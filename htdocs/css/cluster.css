@@ -23,7 +23,7 @@
 .cluster-menu-option-selected {
     background-color: #ccc;
     color: #222;
-    cursor: default;
+    cursor: pointer;
 }
 
 .cluster-menu-option:hover {
@@ -76,7 +76,7 @@
 .sidebar-option-selected {
     background-color: #ccc;
     color: #222;
-    cursor: default;
+    cursor: pointer;
 }
 
 .sidebar-option-title {

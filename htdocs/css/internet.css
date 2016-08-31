@@ -1,0 +1,79 @@
+.browser {
+    border: 1px #ccc solid;
+    width: 90%;
+    height: 700px;
+    margin: 0 auto;
+    margin-top: 16px;
+    padding: 16px;
+    position: relative;
+
+}
+
+.browser-bar {
+    border: 1px #ccc solid;
+    width: 90%;
+    height: 20px;
+    margin: 0 auto;
+    margin-top: 16px;
+    padding: 16px;
+    position: relative;
+
+}
+
+.search-bar {
+    text-align: center;
+    margin-left: 10px;
+    font-size: 14px;
+    font-family: 'Inconsolata';
+    padding: 3px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+
+}
+
+.internet-menu {
+    border-bottom: 1px #ccc solid;
+    display: flex;
+    height: 50px;
+    justify-content: space-between;
+    margin: 0;
+    overflow: hidden;
+    padding: 0;
+    position: relative;
+    vertical-align: top;
+}
+
+.internet-menu-option-selected,
+.internet-menu-option {
+    color: #ccc;
+    font-size: 18px;
+    margin-left: 16px;
+    margin-right: 16px;
+    padding: 16px;
+}
+
+.internet-menu-option-selected {
+    background-color: #ccc;
+    color: #222;
+    cursor: default;
+}
+
+.internet-menu-option:hover {
+    background-color: #444;
+    cursor: pointer;
+}
+
+.internet-menu-option:active {
+    background-color: #666;
+    cursor: pointer;
+}
+
+.internet-menu-option-selected:hover {
+    cursor: pointer;
+}
+
+.cluster-menu-option-edge {
+    margin-left: 16px;
+    margin-right: 16px;
+    padding: 16px;
+}

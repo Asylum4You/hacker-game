@@ -41,3 +41,12 @@ body {
     background-color: #666;
     cursor: pointer;
 }
+
+.button-normal {
+    font-size: 14px;
+    font-family: 'Inconsolata';
+    padding: 3px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+}
+

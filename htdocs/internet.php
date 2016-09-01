@@ -33,7 +33,16 @@ or take a look at the full code at {GITHUB LINK}.
 </head>
 
 <body>
-<? require_once("templets/navbar.php"); ?>
+    <div class="main-menu">
+        <div class="main-menu-option">News</div>
+        <div class="main-menu-option-selected">Hack</div>
+        <div class="main-menu-option">E-Mail</div>
+        <div class="main-menu-option">Finances</div>
+        <div class="main-menu-option">Database</div>
+        <div class="main-menu-option">Clan</div>
+        <div class="main-menu-option">Leaderboards</div>
+        <div class="main-menu-option">Profile</div>
+    </div>
     <div class="container">
         <ul class="sidebar">
             <li class="sidebar-option">

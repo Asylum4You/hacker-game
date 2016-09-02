@@ -200,6 +200,7 @@
             case 12:
                 return ".mpx"; //Proxy Malware
         }
+        return -1;
     }
 
     function getSoftwareStatusById(id) {
@@ -211,6 +212,7 @@
             case 2:
                 return "Encrypted";
         }
+        return -1;
     }
 
     function getSoftwareSizeByLevel(level) {
@@ -312,6 +314,122 @@
                 var softwareRows = [];
                 var totalSize = 0;
                 var softwareTable = d.createElement("table");
+
+                function addSoftwareAction(softwareRowActionElement, type) {
+                    /*
+                     * type values:
+                     * 0: Disabled
+                     * 1: Info
+                     * 2: Run
+                     * 3: Stop
+                     * 4: Encrypt
+                     * 5: Decrypt
+                     * 6: Delete
+                     * 7: Remove
+                     * 8: Upload
+                     */
+
+                    switch (type) {
+                        case 0:
+                            softwareCellDisabled = d.createElement("div");
+                            $(softwareCellDisabled).attr("class", "software-cell-action-disabled");
+                            softwareCellDisabledIcon = d.createElement("img");
+                            $(softwareCellDisabledIcon).attr("src", "res/img/disabled.png");
+                            $(softwareCellDisabledIcon).appendTo(softwareCellDisabled);
+                            $(softwareCellDisabled).appendTo(softwareRowActionElement);
+                            break;
+                        case 1:
+                            softwareCellInfo = d.createElement("div");
+                            $(softwareCellInfo).attr("class", "software-cell-action button");
+                            softwareCellInfoIcon = d.createElement("img");
+                            $(softwareCellInfoIcon).attr("src", "res/img/info.png");
+                            softwareCellInfoTooltip = d.createElement("div");
+                            $(softwareCellInfoTooltip).attr("class", "software-cell-action-tooltip-text").text("Info");
+                            $(softwareCellInfoIcon).appendTo(softwareCellInfo);
+                            $(softwareCellInfoTooltip).appendTo(softwareCellInfo);
+                            $(softwareCellInfo).appendTo(softwareRowActionElement);
+                            break;
+                        case 2:
+                            softwareCellRun = d.createElement("div");
+                            $(softwareCellRun).attr("class", "software-cell-action button");
+                            softwareCellRunIcon = d.createElement("img");
+                            $(softwareCellRunIcon).attr("src", "res/img/run.png");
+                            softwareCellRunTooltip = d.createElement("div");
+                            $(softwareCellRunTooltip).attr("class", "software-cell-action-tooltip-text").text("Run");
+                            $(softwareCellRunIcon).appendTo(softwareCellRun);
+                            $(softwareCellRunTooltip).appendTo(softwareCellRun);
+                            $(softwareCellRun).appendTo(softwareRowActionElement);
+                            break;
+                        case 3:
+                            softwareCellStop = d.createElement("div");
+                            $(softwareCellStop).attr("class", "software-cell-action button");
+                            softwareCellStopIcon = d.createElement("img");
+                            $(softwareCellStopIcon).attr("src", "res/img/stop.png");
+                            softwareCellStopTooltip = d.createElement("div");
+                            $(softwareCellStopTooltip).attr("class", "software-cell-action-tooltip-text").text("Stop");
+                            $(softwareCellStopIcon).appendTo(softwareCellStop);
+                            $(softwareCellStopTooltip).appendTo(softwareCellStop);
+                            $(softwareCellStop).appendTo(softwareRowActionElement);
+                            break;
+                        case 4:
+                            softwareCellEncrypt = d.createElement("div");
+                            $(softwareCellEncrypt).attr("class", "software-cell-action button");
+                            softwareCellEncryptIcon = d.createElement("img");
+                            $(softwareCellEncryptIcon).attr("src", "res/img/encrypt.png");
+                            softwareCellEncryptTooltip = d.createElement("div");
+                            $(softwareCellEncryptTooltip).attr("class", "software-cell-action-tooltip-text").text("Encrypt");
+                            $(softwareCellEncryptIcon).appendTo(softwareCellEncrypt);
+                            $(softwareCellEncryptTooltip).appendTo(softwareCellEncrypt);
+                            $(softwareCellEncrypt).appendTo(softwareRowActionElement);
+                            break;
+                        case 5:
+                            softwareCellDecrypt = d.createElement("div");
+                            $(softwareCellDecrypt).attr("class", "software-cell-action button");
+                            softwareCellDecryptIcon = d.createElement("img");
+                            $(softwareCellDecryptIcon).attr("src", "res/img/decrypt.png");
+                            softwareCellDecryptTooltip = d.createElement("div");
+                            $(softwareCellDecryptTooltip).attr("class", "software-cell-action-tooltip-text").text("Decrypt");
+                            $(softwareCellDecryptIcon).appendTo(softwareCellDecrypt);
+                            $(softwareCellDecryptTooltip).appendTo(softwareCellDecrypt);
+                            $(softwareCellDecrypt).appendTo(softwareRowActionElement);
+                            break;
+                        case 6:
+                            softwareCellDelete = d.createElement("div");
+                            $(softwareCellDelete).attr("class", "software-cell-action button");
+                            softwareCellDeleteIcon = d.createElement("img");
+                            $(softwareCellDeleteIcon).attr("src", "res/img/delete.png");
+                            softwareCellDeleteTooltip = d.createElement("div");
+                            $(softwareCellDeleteTooltip).attr("class", "software-cell-action-tooltip-text").text("Delete");
+                            $(softwareCellDeleteIcon).appendTo(softwareCellDelete);
+                            $(softwareCellDeleteTooltip).appendTo(softwareCellDelete);
+                            $(softwareCellDelete).appendTo(softwareRowActionElement);
+                            break;
+                        case 7:
+                            softwareCellRemove = d.createElement("div");
+                            $(softwareCellRemove).attr("class", "software-cell-action button");
+                            softwareCellRemoveIcon = d.createElement("img");
+                            $(softwareCellRemoveIcon).attr("src", "res/img/remove.png");
+                            softwareCellRemoveTooltip = d.createElement("div");
+                            $(softwareCellRemoveTooltip).attr("class", "software-cell-action-tooltip-text").text("Remove");
+                            $(softwareCellRemoveIcon).appendTo(softwareCellRemove);
+                            $(softwareCellRemoveTooltip).appendTo(softwareCellRemove);
+                            $(softwareCellRemove).appendTo(softwareRowActionElement);
+                            break;
+                        case 8:
+                            softwareCellUpload = d.createElement("div");
+                            $(softwareCellUpload).attr("class", "software-cell-action button");
+                            softwareCellUploadIcon = d.createElement("img");
+                            $(softwareCellUploadIcon).attr("src", "res/img/upload.png");
+                            softwareCellUploadTooltip = d.createElement("div");
+                            $(softwareCellUploadTooltip).attr("class", "software-cell-action-tooltip-text").text("Upload");
+                            $(softwareCellUploadIcon).appendTo(softwareCellUpload);
+                            $(softwareCellUploadTooltip).appendTo(softwareCellUpload);
+                            $(softwareCellUpload).appendTo(softwareRowActionElement);
+                            break;
+                    }
+                    return -1;
+                }
+
                 $(softwareTable).attr("class", "software");
 
                 var softwareInitialRow = d.createElement("tr");
@@ -364,180 +482,40 @@
                     $(softwareRowActions).attr("class", "software-cell");
 
                     if (softwareData[i].STATUS == 0) {
-                        softwareCellInfo = d.createElement("div");
-                        $(softwareCellInfo).attr("class", "software-cell-action button");
-                        softwareCellInfoIcon = d.createElement("img");
-                        $(softwareCellInfoIcon).attr("src", "res/img/info.png");
-                        softwareCellInfoTooltip = d.createElement("div");
-                        $(softwareCellInfoTooltip).attr("class", "software-cell-action-tooltip-text").text("Info");
-                        $(softwareCellInfoIcon).appendTo(softwareCellInfo);
-                        $(softwareCellInfoTooltip).appendTo(softwareCellInfo);
-                        $(softwareCellInfo).appendTo(softwareRowActions);
-
-                        softwareCellRun = d.createElement("div");
-                        $(softwareCellRun).attr("class", "software-cell-action button");
-                        softwareCellRunIcon = d.createElement("img");
-                        $(softwareCellRunIcon).attr("src", "res/img/run.png");
-                        softwareCellRunTooltip = d.createElement("div");
-                        $(softwareCellRunTooltip).attr("class", "software-cell-action-tooltip-text").text("Run");
-                        $(softwareCellRunIcon).appendTo(softwareCellRun);
-                        $(softwareCellRunTooltip).appendTo(softwareCellRun);
-                        $(softwareCellRun).appendTo(softwareRowActions);
-
-                        softwareCellEncrypt = d.createElement("div");
-                        $(softwareCellEncrypt).attr("class", "software-cell-action button");
-                        softwareCellEncryptIcon = d.createElement("img");
-                        $(softwareCellEncryptIcon).attr("src", "res/img/encrypt.png");
-                        softwareCellEncryptTooltip = d.createElement("div");
-                        $(softwareCellEncryptTooltip).attr("class", "software-cell-action-tooltip-text").text("Encrypt");
-                        $(softwareCellEncryptIcon).appendTo(softwareCellEncrypt);
-                        $(softwareCellEncryptTooltip).appendTo(softwareCellEncrypt);
-                        $(softwareCellEncrypt).appendTo(softwareRowActions);
-
-                        softwareCellDelete = d.createElement("div");
-                        $(softwareCellDelete).attr("class", "software-cell-action button");
-                        softwareCellDeleteIcon = d.createElement("img");
-                        $(softwareCellDeleteIcon).attr("src", "res/img/delete.png");
-                        softwareCellDeleteTooltip = d.createElement("div");
-                        $(softwareCellDeleteTooltip).attr("class", "software-cell-action-tooltip-text").text("Delete");
-                        $(softwareCellDeleteIcon).appendTo(softwareCellDelete);
-                        $(softwareCellDeleteTooltip).appendTo(softwareCellDelete);
-                        $(softwareCellDelete).appendTo(softwareRowActions);
-
-                        softwareCellUpload = d.createElement("div");
-                        $(softwareCellUpload).attr("class", "software-cell-action button");
-                        softwareCellUploadIcon = d.createElement("img");
-                        $(softwareCellUploadIcon).attr("src", "res/img/upload.png");
-                        softwareCellUploadTooltip = d.createElement("div");
-                        $(softwareCellUploadTooltip).attr("class", "software-cell-action-tooltip-text").text("Upload");
-                        $(softwareCellUploadIcon).appendTo(softwareCellUpload);
-                        $(softwareCellUploadTooltip).appendTo(softwareCellUpload);
-                        $(softwareCellUpload).appendTo(softwareRowActions);
+                        addSoftwareAction(softwareRowActions, 1);
+                        addSoftwareAction(softwareRowActions, 2);
+                        addSoftwareAction(softwareRowActions, 4);
+                        addSoftwareAction(softwareRowActions, 6);
+                        addSoftwareAction(softwareRowActions, 8);
                     }
 
                     if (softwareData[i].STATUS == 1) {
-                        softwareCellInfo = d.createElement("div");
-                        $(softwareCellInfo).attr("class", "software-cell-action button");
-                        softwareCellInfoIcon = d.createElement("img");
-                        $(softwareCellInfoIcon).attr("src", "res/img/info.png");
-                        softwareCellInfoTooltip = d.createElement("div");
-                        $(softwareCellInfoTooltip).attr("class", "software-cell-action-tooltip-text").text("Info");
-                        $(softwareCellInfoIcon).appendTo(softwareCellInfo);
-                        $(softwareCellInfoTooltip).appendTo(softwareCellInfo);
-                        $(softwareCellInfo).appendTo(softwareRowActions);
+                        addSoftwareAction(softwareRowActions, 1);
 
                         if (softwareData[i].TYPE >= 9 && softwareData[i].TYPE <= 12) {
-                            softwareCellDisabled = d.createElement("div");
-                            $(softwareCellDisabled).attr("class", "software-cell-action-disabled");
-                            softwareCellDisabledIcon = d.createElement("img");
-                            $(softwareCellDisabledIcon).attr("src", "res/img/disabled.png");
-                            $(softwareCellDisabledIcon).appendTo(softwareCellDisabled);
-                            $(softwareCellDisabled).appendTo(softwareRowActions);
+                            addSoftwareAction(softwareRowActions, 0);
                         } else {
-                            softwareCellStop = d.createElement("div");
-                            $(softwareCellStop).attr("class", "software-cell-action button");
-                            softwareCellStopIcon = d.createElement("img");
-                            $(softwareCellStopIcon).attr("src", "res/img/stop.png");
-                            softwareCellStopTooltip = d.createElement("div");
-                            $(softwareCellStopTooltip).attr("class", "software-cell-action-tooltip-text").text("Stop");
-                            $(softwareCellStopIcon).appendTo(softwareCellStop);
-                            $(softwareCellStopTooltip).appendTo(softwareCellStop);
-                            $(softwareCellStop).appendTo(softwareRowActions);
+                            addSoftwareAction(softwareRowActions, 3);
                         }
-
-                        softwareCellDisabled = d.createElement("div");
-                        $(softwareCellDisabled).attr("class", "software-cell-action-disabled");
-                        softwareCellDisabledIcon = d.createElement("img");
-                        $(softwareCellDisabledIcon).attr("src", "res/img/disabled.png");
-                        $(softwareCellDisabledIcon).appendTo(softwareCellDisabled);
-                        $(softwareCellDisabled).appendTo(softwareRowActions);
-
+                        addSoftwareAction(softwareRowActions, 0);
                         if (softwareData[i].TYPE >= 9 && softwareData[i].TYPE <= 12) {
-                            softwareCellRemove = d.createElement("div");
-                            $(softwareCellRemove).attr("class", "software-cell-action button");
-                            softwareCellRemoveIcon = d.createElement("img");
-                            $(softwareCellRemoveIcon).attr("src", "res/img/remove.png");
-                            softwareCellRemoveTooltip = d.createElement("div");
-                            $(softwareCellRemoveTooltip).attr("class", "software-cell-action-tooltip-text").text("Remove");
-                            $(softwareCellRemoveIcon).appendTo(softwareCellRemove);
-                            $(softwareCellRemoveTooltip).appendTo(softwareCellRemove);
-                            $(softwareCellRemove).appendTo(softwareRowActions);
+                            addSoftwareAction(softwareRowActions, 7);
                         } else {
-                            softwareCellDisabled = d.createElement("div");
-                            $(softwareCellDisabled).attr("class", "software-cell-action-disabled");
-                            softwareCellDisabledIcon = d.createElement("img");
-                            $(softwareCellDisabledIcon).attr("src", "res/img/disabled.png");
-                            $(softwareCellDisabledIcon).appendTo(softwareCellDisabled);
-                            $(softwareCellDisabled).appendTo(softwareRowActions);
+                            addSoftwareAction(softwareRowActions, 0);
                         }
-
                         if (softwareData[i].TYPE >= 9 && softwareData[i].TYPE <= 12) {
-                            softwareCellDisabled = d.createElement("div");
-                            $(softwareCellDisabled).attr("class", "software-cell-action-disabled");
-                            softwareCellDisabledIcon = d.createElement("img");
-                            $(softwareCellDisabledIcon).attr("src", "res/img/disabled.png");
-                            $(softwareCellDisabledIcon).appendTo(softwareCellDisabled);
-                            $(softwareCellDisabled).appendTo(softwareRowActions);
+                            addSoftwareAction(softwareRowActions, 0);
                         } else {
-                            softwareCellUpload = d.createElement("div");
-                            $(softwareCellUpload).attr("class", "software-cell-action button");
-                            softwareCellUploadIcon = d.createElement("img");
-                            $(softwareCellUploadIcon).attr("src", "res/img/upload.png");
-                            softwareCellUploadTooltip = d.createElement("div");
-                            $(softwareCellUploadTooltip).attr("class", "software-cell-action-tooltip-text").text("Upload");
-                            $(softwareCellUploadIcon).appendTo(softwareCellUpload);
-                            $(softwareCellUploadTooltip).appendTo(softwareCellUpload);
-                            $(softwareCellUpload).appendTo(softwareRowActions);
+                            addSoftwareAction(softwareRowActions, 8);
                         }
                     }
 
                     if (softwareData[i].STATUS == 2) {
-                        softwareCellInfo = d.createElement("div");
-                        $(softwareCellInfo).attr("class", "software-cell-action button");
-                        softwareCellInfoIcon = d.createElement("img");
-                        $(softwareCellInfoIcon).attr("src", "res/img/info.png");
-                        softwareCellInfoTooltip = d.createElement("div");
-                        $(softwareCellInfoTooltip).attr("class", "software-cell-action-tooltip-text").text("Info");
-                        $(softwareCellInfoIcon).appendTo(softwareCellInfo);
-                        $(softwareCellInfoTooltip).appendTo(softwareCellInfo);
-                        $(softwareCellInfo).appendTo(softwareRowActions);
-
-                        softwareCellDisabled = d.createElement("div");
-                        $(softwareCellDisabled).attr("class", "software-cell-action-disabled");
-                        softwareCellDisabledIcon = d.createElement("img");
-                        $(softwareCellDisabledIcon).attr("src", "res/img/disabled.png");
-                        $(softwareCellDisabledIcon).appendTo(softwareCellDisabled);
-                        $(softwareCellDisabled).appendTo(softwareRowActions);
-
-                        softwareCellDecrypt = d.createElement("div");
-                        $(softwareCellDecrypt).attr("class", "software-cell-action button");
-                        softwareCellDecryptIcon = d.createElement("img");
-                        $(softwareCellDecryptIcon).attr("src", "res/img/decrypt.png");
-                        softwareCellDecryptTooltip = d.createElement("div");
-                        $(softwareCellDecryptTooltip).attr("class", "software-cell-action-tooltip-text").text("Decrypt");
-                        $(softwareCellDecryptIcon).appendTo(softwareCellDecrypt);
-                        $(softwareCellDecryptTooltip).appendTo(softwareCellDecrypt);
-                        $(softwareCellDecrypt).appendTo(softwareRowActions);
-
-                        softwareCellDelete = d.createElement("div");
-                        $(softwareCellDelete).attr("class", "software-cell-action button");
-                        softwareCellDeleteIcon = d.createElement("img");
-                        $(softwareCellDeleteIcon).attr("src", "res/img/delete.png");
-                        softwareCellDeleteTooltip = d.createElement("div");
-                        $(softwareCellDeleteTooltip).attr("class", "software-cell-action-tooltip-text").text("Delete");
-                        $(softwareCellDeleteIcon).appendTo(softwareCellDelete);
-                        $(softwareCellDeleteTooltip).appendTo(softwareCellDelete);
-                        $(softwareCellDelete).appendTo(softwareRowActions);
-
-                        softwareCellUpload = d.createElement("div");
-                        $(softwareCellUpload).attr("class", "software-cell-action button");
-                        softwareCellUploadIcon = d.createElement("img");
-                        $(softwareCellUploadIcon).attr("src", "res/img/upload.png");
-                        softwareCellUploadTooltip = d.createElement("div");
-                        $(softwareCellUploadTooltip).attr("class", "software-cell-action-tooltip-text").text("Upload");
-                        $(softwareCellUploadIcon).appendTo(softwareCellUpload);
-                        $(softwareCellUploadTooltip).appendTo(softwareCellUpload);
-                        $(softwareCellUpload).appendTo(softwareRowActions);
+                        addSoftwareAction(softwareRowActions, 1);
+                        addSoftwareAction(softwareRowActions, 0);
+                        addSoftwareAction(softwareRowActions, 5);
+                        addSoftwareAction(softwareRowActions, 6);
+                        addSoftwareAction(softwareRowActions, 8);
                     }
 
                     $(softwareRowActions).appendTo(softwareRows[i]);

@@ -5,11 +5,11 @@
     border: 1px #ccc solid;
 }
 
-.processes-row {
+.processes tr {
     border: 1px #ccc solid;
 }
 
-.processes-cell {
+.processes td {
     border: 1px #ccc solid;
     padding: 8px;
 }
@@ -20,16 +20,6 @@
     margin-right: 8px;
     padding: 8px;
     position: relative;
-}
-
-.process-cell-action:hover {
-    background-color: #444;
-    cursor: pointer;
-}
-
-.process-cell-action:active {
-    background-color: #666;
-    cursor: pointer;
 }
 
 .process-cell-action .cell-action-tooltip-text {

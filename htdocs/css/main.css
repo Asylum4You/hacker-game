@@ -42,3 +42,24 @@ body {
     cursor: pointer;
 }
 
+.button:hover {
+    background-color: #444;
+    cursor: pointer;
+}
+
+.button:active {
+    background-color: #666;
+}
+
+input[type="text"] {
+    height: 16px;
+    font-size: 16px;
+    font-family: 'Inconsolata';
+    background-color: #444;
+    border: 1px solid #ccc;
+    color: #ccc;
+}
+
+input[type="text"]:focus {
+    outline: none;
+}

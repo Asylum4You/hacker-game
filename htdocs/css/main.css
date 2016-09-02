@@ -32,16 +32,6 @@ body {
     cursor: pointer;
 }
 
-.main-menu-option:hover {
-    background-color: #444;
-    cursor: pointer;
-}
-
-.main-menu-option:active {
-    background-color: #666;
-    cursor: pointer;
-}
-
 .button:hover {
     background-color: #444;
     cursor: pointer;

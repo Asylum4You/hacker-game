@@ -249,7 +249,7 @@
 
                     if (hardwareData[i].CPU < maxCpuLevel) {
                         hardwareUpgradeCpu = d.createElement("div");
-                        $(hardwareUpgradeCpu).attr("class", "hardware-option-upgrade").text("Upgrade CPU to " + getCpuSpecByLevel(hardwareData[i].CPU + 1) + " for " + getCpuUpgradePriceByLevel(hardwareData[i].CPU))
+                        $(hardwareUpgradeCpu).attr("class", "hardware-option-upgrade button").text("Upgrade CPU to " + getCpuSpecByLevel(hardwareData[i].CPU + 1) + " for " + getCpuUpgradePriceByLevel(hardwareData[i].CPU))
                         $(hardwareUpgradeCpu).appendTo(hardwareMenus[i]);
                     }
 
@@ -259,7 +259,7 @@
 
                     if (hardwareData[i].RAM < maxRamLevel) {
                         hardwareUpgradeRam = d.createElement("div");
-                        $(hardwareUpgradeRam).attr("class", "hardware-option-upgrade").text("Upgrade RAM to " + getRamSpecByLevel(hardwareData[i].RAM + 1) + " for " + getRamUpgradePriceByLevel(hardwareData[i].RAM))
+                        $(hardwareUpgradeRam).attr("class", "hardware-option-upgrade button").text("Upgrade RAM to " + getRamSpecByLevel(hardwareData[i].RAM + 1) + " for " + getRamUpgradePriceByLevel(hardwareData[i].RAM))
                         $(hardwareUpgradeRam).appendTo(hardwareMenus[i]);
                     }
 
@@ -269,25 +269,25 @@
 
                     if (hardwareData[i].DISK < maxDiskLevel) {
                         hardwareUpgradeDisk = d.createElement("div");
-                        $(hardwareUpgradeDisk).attr("class", "hardware-option-upgrade").text("Upgrade Disk to " + getDiskSpecByLevel(hardwareData[i].DISK + 1) + " for " + getDiskUpgradePriceByLevel(hardwareData[i].DISK))
+                        $(hardwareUpgradeDisk).attr("class", "hardware-option-upgrade button").text("Upgrade Disk to " + getDiskSpecByLevel(hardwareData[i].DISK + 1) + " for " + getDiskUpgradePriceByLevel(hardwareData[i].DISK))
                         $(hardwareUpgradeDisk).appendTo(hardwareMenus[i]);
                     }
 
                     $(hardwareMenus[i]).appendTo($("#content"));
                 }
                 hardwareNewServer = d.createElement("div");
-                $(hardwareNewServer).attr("class", "hardware-big-option");
+                $(hardwareNewServer).attr("class", "hardware button");
                 hardwareTitle = d.createElement("div");
                 $(hardwareTitle).attr("class", "hardware-title").text("Buy new server");
                 $(hardwareTitle).appendTo(hardwareNewServer);
                 hardwareCpu = d.createElement("div");
-                $(hardwareCpu).attr("class", "hardware-big-option-upgrade").text("CPU: " + getCpuSpecByLevel(0));
+                $(hardwareCpu).attr("class", "hardware-option").text("CPU: " + getCpuSpecByLevel(0));
                 $(hardwareCpu).appendTo(hardwareNewServer);
                 hardwareRam = d.createElement("div");
-                $(hardwareRam).attr("class", "hardware-big-option-upgrade").text("Ram: " + getRamSpecByLevel(0));
+                $(hardwareRam).attr("class", "hardware-option").text("Ram: " + getRamSpecByLevel(0));
                 $(hardwareRam).appendTo(hardwareNewServer);
                 hardwareDisk = d.createElement("div");
-                $(hardwareDisk).attr("class", "hardware-big-option-upgrade").text("Disk: " + getDiskSpecByLevel(0));
+                $(hardwareDisk).attr("class", "hardware-option").text("Disk: " + getDiskSpecByLevel(0));
                 $(hardwareDisk).appendTo(hardwareNewServer);
                 $(hardwareNewServer).appendTo($("#content"));
             }
@@ -365,7 +365,7 @@
 
                     if (softwareData[i].STATUS == 0) {
                         softwareCellInfo = d.createElement("div");
-                        $(softwareCellInfo).attr("class", "software-cell-action");
+                        $(softwareCellInfo).attr("class", "software-cell-action button");
                         softwareCellInfoIcon = d.createElement("img");
                         $(softwareCellInfoIcon).attr("src", "res/img/info.png");
                         softwareCellInfoTooltip = d.createElement("div");
@@ -375,7 +375,7 @@
                         $(softwareCellInfo).appendTo(softwareRowActions);
 
                         softwareCellRun = d.createElement("div");
-                        $(softwareCellRun).attr("class", "software-cell-action");
+                        $(softwareCellRun).attr("class", "software-cell-action button");
                         softwareCellRunIcon = d.createElement("img");
                         $(softwareCellRunIcon).attr("src", "res/img/run.png");
                         softwareCellRunTooltip = d.createElement("div");
@@ -385,7 +385,7 @@
                         $(softwareCellRun).appendTo(softwareRowActions);
 
                         softwareCellEncrypt = d.createElement("div");
-                        $(softwareCellEncrypt).attr("class", "software-cell-action");
+                        $(softwareCellEncrypt).attr("class", "software-cell-action button");
                         softwareCellEncryptIcon = d.createElement("img");
                         $(softwareCellEncryptIcon).attr("src", "res/img/encrypt.png");
                         softwareCellEncryptTooltip = d.createElement("div");
@@ -395,7 +395,7 @@
                         $(softwareCellEncrypt).appendTo(softwareRowActions);
 
                         softwareCellDelete = d.createElement("div");
-                        $(softwareCellDelete).attr("class", "software-cell-action");
+                        $(softwareCellDelete).attr("class", "software-cell-action button");
                         softwareCellDeleteIcon = d.createElement("img");
                         $(softwareCellDeleteIcon).attr("src", "res/img/delete.png");
                         softwareCellDeleteTooltip = d.createElement("div");
@@ -405,7 +405,7 @@
                         $(softwareCellDelete).appendTo(softwareRowActions);
 
                         softwareCellUpload = d.createElement("div");
-                        $(softwareCellUpload).attr("class", "software-cell-action");
+                        $(softwareCellUpload).attr("class", "software-cell-action button");
                         softwareCellUploadIcon = d.createElement("img");
                         $(softwareCellUploadIcon).attr("src", "res/img/upload.png");
                         softwareCellUploadTooltip = d.createElement("div");
@@ -417,7 +417,7 @@
 
                     if (softwareData[i].STATUS == 1) {
                         softwareCellInfo = d.createElement("div");
-                        $(softwareCellInfo).attr("class", "software-cell-action");
+                        $(softwareCellInfo).attr("class", "software-cell-action button");
                         softwareCellInfoIcon = d.createElement("img");
                         $(softwareCellInfoIcon).attr("src", "res/img/info.png");
                         softwareCellInfoTooltip = d.createElement("div");
@@ -435,7 +435,7 @@
                             $(softwareCellDisabled).appendTo(softwareRowActions);
                         } else {
                             softwareCellStop = d.createElement("div");
-                            $(softwareCellStop).attr("class", "software-cell-action");
+                            $(softwareCellStop).attr("class", "software-cell-action button");
                             softwareCellStopIcon = d.createElement("img");
                             $(softwareCellStopIcon).attr("src", "res/img/stop.png");
                             softwareCellStopTooltip = d.createElement("div");
@@ -454,7 +454,7 @@
 
                         if (softwareData[i].TYPE >= 9 && softwareData[i].TYPE <= 12) {
                             softwareCellRemove = d.createElement("div");
-                            $(softwareCellRemove).attr("class", "software-cell-action");
+                            $(softwareCellRemove).attr("class", "software-cell-action button");
                             softwareCellRemoveIcon = d.createElement("img");
                             $(softwareCellRemoveIcon).attr("src", "res/img/remove.png");
                             softwareCellRemoveTooltip = d.createElement("div");
@@ -480,7 +480,7 @@
                             $(softwareCellDisabled).appendTo(softwareRowActions);
                         } else {
                             softwareCellUpload = d.createElement("div");
-                            $(softwareCellUpload).attr("class", "software-cell-action");
+                            $(softwareCellUpload).attr("class", "software-cell-action button");
                             softwareCellUploadIcon = d.createElement("img");
                             $(softwareCellUploadIcon).attr("src", "res/img/upload.png");
                             softwareCellUploadTooltip = d.createElement("div");
@@ -493,7 +493,7 @@
 
                     if (softwareData[i].STATUS == 2) {
                         softwareCellInfo = d.createElement("div");
-                        $(softwareCellInfo).attr("class", "software-cell-action");
+                        $(softwareCellInfo).attr("class", "software-cell-action button");
                         softwareCellInfoIcon = d.createElement("img");
                         $(softwareCellInfoIcon).attr("src", "res/img/info.png");
                         softwareCellInfoTooltip = d.createElement("div");
@@ -510,7 +510,7 @@
                         $(softwareCellDisabled).appendTo(softwareRowActions);
 
                         softwareCellDecrypt = d.createElement("div");
-                        $(softwareCellDecrypt).attr("class", "software-cell-action");
+                        $(softwareCellDecrypt).attr("class", "software-cell-action button");
                         softwareCellDecryptIcon = d.createElement("img");
                         $(softwareCellDecryptIcon).attr("src", "res/img/decrypt.png");
                         softwareCellDecryptTooltip = d.createElement("div");
@@ -520,7 +520,7 @@
                         $(softwareCellDecrypt).appendTo(softwareRowActions);
 
                         softwareCellDelete = d.createElement("div");
-                        $(softwareCellDelete).attr("class", "software-cell-action");
+                        $(softwareCellDelete).attr("class", "software-cell-action button");
                         softwareCellDeleteIcon = d.createElement("img");
                         $(softwareCellDeleteIcon).attr("src", "res/img/delete.png");
                         softwareCellDeleteTooltip = d.createElement("div");
@@ -530,7 +530,7 @@
                         $(softwareCellDelete).appendTo(softwareRowActions);
 
                         softwareCellUpload = d.createElement("div");
-                        $(softwareCellUpload).attr("class", "software-cell-action");
+                        $(softwareCellUpload).attr("class", "software-cell-action button");
                         softwareCellUploadIcon = d.createElement("img");
                         $(softwareCellUploadIcon).attr("src", "res/img/upload.png");
                         softwareCellUploadTooltip = d.createElement("div");

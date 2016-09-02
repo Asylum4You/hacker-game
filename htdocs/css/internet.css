@@ -17,38 +17,19 @@
 }
 
 .search-bar {
-    height: 16px;
     text-align: center;
     margin-left: 10px;
-    font-size: 16px;
-    font-family: 'Inconsolata';
     padding: 4px;
-    background-color: #444;
-    border: 1px solid #ccc;
-    color: #ccc;
     width: 200px;
     vertical-align: top;
 }
 
-.search-bar:focus{
-    outline: none;
-}
-
 .search-bar-button {
-    font-size: 16px;
-    font-family: 'Inconsolata';
     padding: 4px;
     background-color: #222;
     border: 1px solid #ccc;
     display: inline-block;
     cursor: pointer;
-}
-
-.search-bar-button:hover {
-    background-color: #444;
-}
-.search-bar-button:active {
-    background-color: #666;
 }
 
 .internet-menu {

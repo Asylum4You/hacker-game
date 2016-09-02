@@ -17,43 +17,12 @@
     font-weight: bold;
 }
 
-.hardware-big-option {
-    display: inline-block;
-    border: 1px #ccc solid;
-    width: 275px;
-    margin: 16px;
-    padding: 16px;
-    cursor: pointer;
-}
-
-.hardware-big-option:hover {
-    background-color: #444;
-    cursor: pointer;
-}
-
-.hardware-big-option:active {
-    background-color: #666;
-    cursor: pointer;
-}
-
 .hardware-option-upgrade {
     padding: 8px;
     margin-top: 4px;
     margin-bottom: 32px;
 }
 
-.hardware-big-option-upgrade {
-    padding: 8px;
-    margin-top: 4px;
-    margin-bottom: 32px;
-}
-
-.hardware-option-upgrade:hover {
-    background-color: #444;
-    cursor: pointer;
-}
-
-.hardware-option-upgrade:active {
-    background-color: #666;
+.hardware .hardware-option-upgrade{
     cursor: pointer;
 }

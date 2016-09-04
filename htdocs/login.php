@@ -9,7 +9,7 @@
         if($result->num_rows == 1) {
             // Compare (possibly hashed) passwords
             $row = $result->fetch_assoc();
-            if(strcmp($password,/*hash_function()*/row["password"]) {
+            if(strcmp($password,row["password"]) {
                 $_SESSION["username"] = $username;
                 $_SESSION["auth"] = true;
                 //Redirect somewhere

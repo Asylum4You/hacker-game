@@ -1,15 +1,15 @@
 .software {
     margin: auto;
     margin-top: 64px;
-    margin-bottom: 256px;
+    margin-bottom: 64px;
     border: 1px #ccc solid;
 }
 
-.software tr {
+.software-row {
     border: 1px #ccc solid;
 }
 
-.software td{
+.software-cell{
     border: 1px #ccc solid;
     padding: 8px;
 }

@@ -1,1 +1,1 @@
-[{"NAME":"3xpl0it0r","TYPE":0,"LEVEL":12,"STATUS":0},{"NAME":"cr4ck3r","TYPE":1,"LEVEL":12,"STATUS":1},{"NAME":"m1n3r","TYPE":9,"LEVEL":12,"STATUS":1},{"NAME":"f1r3w4ll","TYPE":2,"LEVEL":15,"STATUS":2}]
+[{"ID":10,"NAME":"3xpl0it0r","TYPE":0,"LEVEL":12,"STATUS":0},{"ID":12,"NAME":"cr4ck3r","TYPE":1,"LEVEL":12,"STATUS":1},{"ID":14,"NAME":"m1n3r","TYPE":9,"LEVEL":12,"STATUS":1},{"ID":16,"NAME":"f1r3w4ll","TYPE":2,"LEVEL":15,"STATUS":2}]

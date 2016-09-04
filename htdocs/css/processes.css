@@ -5,11 +5,11 @@
     border: 1px #ccc solid;
 }
 
-.processes tr {
+.processes-row {
     border: 1px #ccc solid;
 }
 
-.processes td {
+.processes-cell {
     border: 1px #ccc solid;
     padding: 8px;
 }

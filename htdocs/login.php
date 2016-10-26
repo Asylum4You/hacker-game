@@ -5,7 +5,8 @@
     if(isset($username) && !empty($username) && isset($password) && !empty($password))
     {
         $table = 'users';
-        $sql=$conn->prepare("SELECT UserUUID, UserName, UserPassword, Banned FROM $table WHERE UserName ='$username'");
+        $sql=$conn->prepare("SELECT UserUUID, UserName, UserPassword, Banned FROM ? WHERE UserName =?");
+        $sql->bind_params("ss",$table,$username);
         $sql->execute();
         
         $result = $sql->setFetchMode(PDO::FETCH_ASSOC);

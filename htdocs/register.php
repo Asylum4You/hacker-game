@@ -1,42 +1,51 @@
 <?php
- /*
- TODO - need changes on echo functions;
- I use single quotes in SQL queries around $variables,
- I dont know if they're needed;
- Countermeasure SQL injections;
- */
- session_start();
- require_once 'dbconnect.php';
- $table = "Users"; /* correct me */
- $username = $_POST("username");
- $password = $_POST("password");
- $email = $_POST("email");
- /* More info? */
- 
- // See if nickname available
- $sql = "SELECT * FROM $table WHERE username = '$username' OR email = '$email';"; // Need SQL injection defenses
- $result = $conn->query($sql);
- if($result->num_rows == 0){
-  // Add user
-  // $password = hash_function($password); // hash_function not declared/defined yet
-  $add = "INSERT INTO $table (username, password, email) VALUES ('$username', '$password','$email')";
-  if($conn->query($add) === true){
-   // Created successfully
-   echo "Account created";
-  }
-  else {
-   // Failure
-   echo "Creation Failure";
-  }
- }
- else {
-  while($row = $result->fetch_assco()) {
-   if( $row["username"] === $username){
-    echo "Username already taken"; 
-   }
-   if($row["email"] === $email){
-    echo "Email already taken";
-   }
-  }
- }
+	/*
+	TODO - need changes on echo functions;
+	I use single quotes in SQL queries around $variables,
+	I dont know if they're needed;
+	Countermeasure SQL injections;
+	*/
+	session_start();
+	require_once 'dbconnect.php';
+	$table = "users";
+	$username = $_POST("username");
+	$password = $_POST("password");
+	$email = $_POST("email");
+	$taken = "";
+	/* More info? */
+	
+	// See if nickname available
+	$st = $conn->prepare("SELECT UserName, UserEmail FROM users WHERE UserName = ? OR UserEmail = ?");
+	$st->bind_params("ss",$username,$email);
+	$st->execute();
+	$lines = $st->fetchAll();
+	if(count($lines) === 0)
+	{
+		//Register then
+		//TODO - generate random(?) UUID
+		$h_pass = sha1($password);
+		$st = $conn->prepare("INSERT INTO users (UserName, UserEmail,UserPassword) VALUES (?, ?, ?)");
+		$st->bind_params("sss",$username,$email,$h_pass);
+		$st->execute();
+	}
+	else
+	{
+		switch(count($lines))
+		{
+			case 1:
+				if($lines[0]['UserEmail'] === $email)
+				{
+					$taken = "email";
+				}
+				else
+				{
+					$taken = "username";
+				}
+				break;
+			default:
+				$taken = "username and email";
+		}
+		echo $taken;
+		//Dont wanna spend much time xp
+	}
 ?>

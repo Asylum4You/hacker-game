@@ -3,6 +3,15 @@
     define('DBUSER', 'root');
     define('DBPASS', '');
     define('DBNAME', 'game');
-
-    $conn = mysqli_connect(DBHOST, DBUSER, DBPASS, DBNAME) or die(mysqli_error($conn));
+    
+    try
+    {
+        $conn=new PDO("mysql:host=".DBHOST.";dbname=".DBNAME,DBUSER,DBPASS);
+        $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+        //Connection successful
+    }
+    catch(PDOException $e)
+    {
+        echo "Connection failed: " . $e->getMessage();
+    }
 ?>

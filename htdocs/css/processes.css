@@ -22,16 +22,6 @@
     position: relative;
 }
 
-.process-cell-action:hover {
-    background-color: #444;
-    cursor: pointer;
-}
-
-.process-cell-action:active {
-    background-color: #666;
-    cursor: pointer;
-}
-
 .process-cell-action .cell-action-tooltip-text {
     pointer-events: none;
     visibility: hidden;

@@ -29,15 +29,27 @@ body {
 .main-menu-option-selected {
     background-color: #ccc;
     color: #222;
-    cursor: default;
+    cursor: pointer;
 }
 
-.main-menu-option:hover {
+.button:hover {
     background-color: #444;
     cursor: pointer;
 }
 
-.main-menu-option:active {
+.button:active {
     background-color: #666;
-    cursor: pointer;
+}
+
+input[type="text"] {
+    height: 16px;
+    font-size: 16px;
+    font-family: 'Inconsolata';
+    background-color: #333;
+    border: 1px solid #ccc;
+    color: #ccc;
+}
+
+input[type="text"]:focus {
+    outline: none;
 }

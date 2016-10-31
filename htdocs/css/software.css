@@ -1,7 +1,7 @@
 .software {
     margin: auto;
     margin-top: 64px;
-    margin-bottom: 256px;
+    margin-bottom: 64px;
     border: 1px #ccc solid;
 }
 
@@ -9,7 +9,7 @@
     border: 1px #ccc solid;
 }
 
-.software-cell {
+.software-cell{
     border: 1px #ccc solid;
     padding: 8px;
 }
@@ -21,17 +21,6 @@
     padding: 8px;
     position: relative;
 }
-
-.software-cell-action:hover {
-    background-color: #444;
-    cursor: pointer;
-}
-
-.software-cell-action:active {
-    background-color: #666;
-    cursor: pointer;
-}
-
 .software-cell-action-disabled {
     display: inline-block;
     margin-left: 8px;

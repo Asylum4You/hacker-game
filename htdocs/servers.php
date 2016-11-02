@@ -3,13 +3,7 @@
 	require_once 'dbconnect.php';
 	$userid = $_SESSION["userID"];
 	$clusterid = $_POST["clusterid"];
-	$table = 'servers';
-	//TODO
-	/*
-	* check if useruuid is the same of the clusteruseruuid
-	* if not
-	*	ask for login/password
-	*/
+	//$table = 'servers';
 	if(isset($userid) && !empty($userid) && isset($clusterid) && !empty($clusterid))
 	{
 		$st = $conn->prepare("SELECT ClusterUserUUID FROM clusters WHERE ClusterID = ?");
@@ -20,7 +14,7 @@
 		switch(count($lines))
 		{
 			case 0:
-				echo "{}";
+				echo "{\"exit\":false,\"error\":\"Cluster not found\"}";
 				break;
 			case 1:
 				$cuserid = $lines[0][ClusterUserUUID];
@@ -31,7 +25,7 @@
 				else
 					$owncluster = false;
 			default:
-				echo "{}";
+				echo "{\"exit\":false,\"error\",\"multiple clusters with ID\"}";
 		}
 		if(isset($owncluster))
 		{
@@ -45,17 +39,21 @@
 			$cpu=0;
 			$sto=0;
 			if(count($lines)===0)
-				echo "{}";
+				echo "{\"exit\":true\"count\":0}";
 			else
 			{
 				//fetch and parse all single servers
 				for($i=0;$i<count($lines);$i++)
 				{
-					
+					$ram+=$lines[$i]['ServerRAM'];
+					$cpu+=$lines[$i]['ServerCPU'];
+					$sto+=$lines[$i]['ServerStorage'];
 				}
+				$js = "{\"exit\":true,\"count\":".count($lines).",\"ram\":".$ram.",\"cpu\":".$cpu.",\"storage\":".$sto."}";
+				echo $js;
 			}
 		}
 		else
-			echo "{}";
+			echo "{\"exit\":false,\"error\":\"intrusion\"}";
 	}
 ?>

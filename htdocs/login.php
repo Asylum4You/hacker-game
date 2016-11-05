@@ -14,8 +14,8 @@
         switch(count($lines))
         {
             case 0:
-                //New user
-                //Redirect to register page
+                $json = "{\"auth\":false,\"error\":\"username\"}";
+                echo $json;
                 break;
             case 1:
                 // One single user
@@ -27,13 +27,16 @@
                     $_SESSION['username']=$username;
                     $_SESSION['userID'] = $row[UserUUID];
                 }
+                $json = "{\"auth\":true}";
+                echo $json;
                 else
                 {
-                    echo "Password incorrect\n";
+                    $json = "{\"auth\":false,\"error\":\"password\"}";
+                    echo $json;
                 }
                 break;
             default:
-                //Something's wrong
+                echo "{\"auth\":null}";
         }
     }
 ?>

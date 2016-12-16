@@ -14,7 +14,7 @@
     padding: 8px;
 }
 
-.process-cell-action {
+/*.process-cell-action {
     display: inline-block;
     margin-left: 8px;
     margin-right: 8px;
@@ -42,3 +42,4 @@
 .process-cell-action:hover .cell-action-tooltip-text {
     visibility: visible;
 }
+*/

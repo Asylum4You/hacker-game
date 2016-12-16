@@ -1,0 +1,2 @@
+process management: track end times for all processes.
+processes complete sequentially, i.e. Not parallel

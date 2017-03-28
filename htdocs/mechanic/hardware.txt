@@ -1,0 +1,72 @@
+Hardware:
+        Cluster:
+            Notes:
+                Group of one or more servers.
+                Independent from any other clusters.
+                A player may own any number of clusters.
+                Location of cluster determines maximum number of servers.
+                Cluster specs are cummulative of all the servers that compose it.
+                Internet/Network specs are per cluster.
+            Locations:
+                Default:
+                    Name:
+                    
+                    Maximum server amount:
+                    
+                Location 1:
+                    Name:
+                        
+                    Maximum server amount:
+                        
+        Server:
+            Notes:
+                A group of servers comprises a cluster.
+                Upgradable unit.
+                Servers cannot be moved between clusters.
+                Parts: CPU, Memory, Storage.
+            Upgrades:
+                CPU:
+                    Default:
+                        Name:
+                            
+                        Price:
+                            
+                        Speed:
+                            
+                    Upgrade 1:
+                        Name:
+                            
+                        Price:
+                            
+                        Speed:
+                            
+                Memory:
+                    Default:
+                        Name:
+                            
+                        Price:
+                            
+                        Speed:
+                            
+                    Upgrade 1:
+                        Name:
+                            
+                        Price:
+                            
+                        Speed:
+                            
+                Harddrive:
+                    Default:
+                        Name:
+                            
+                        Price:
+                            
+                        Speed:
+                            
+                    Upgrade 1:
+                        Name:
+                            
+                        Price:
+                            
+                        Speed:
+                            

@@ -4,49 +4,29 @@
     margin: 0 auto;
     margin-top: 16px;
     position: relative;
-
+    vertical-align: top;
 }
 
 .browser-bar {
     border-bottom: 1px #ccc solid;
-    height: 20px;
     margin: 0 auto;
     padding: 16px;
     position: relative;
     text-align: center;
+    vertical-align: top;
 }
 
 .search-bar {
     text-align: center;
     margin-left: 10px;
-    font-size: 16px;
-    font-family: 'Inconsolata';
     padding: 4px;
-    background-color: #444;
-    border: 1px solid #ccc;
-    color: #ccc;
     width: 200px;
-}
-
-.search-bar:focus{
-    outline: none;
+    vertical-align: top;
 }
 
 .search-bar-button {
-    font-size: 16px;
-    font-family: 'Inconsolata';
     padding: 4px;
     background-color: #222;
-    border: 1px solid #ccc;
-    display: inline-block;
-    cursor: pointer;
-}
-
-.search-bar-button:hover {
-    font-size: 16px;
-    font-family: 'Inconsolata';
-    padding: 4px;
-    background-color: #444;
     border: 1px solid #ccc;
     display: inline-block;
     cursor: pointer;
@@ -55,7 +35,6 @@
 .internet-menu {
     border-bottom: 1px #ccc solid;
     display: flex;
-    height: 50px;
     justify-content: space-between;
     margin: 0;
     overflow: hidden;
@@ -91,10 +70,4 @@
 
 .internet-menu-option-selected:hover {
     cursor: pointer;
-}
-
-.cluster-menu-option-edge {
-    margin-left: 16px;
-    margin-right: 16px;
-    padding: 16px;
 }

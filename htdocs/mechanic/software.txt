@@ -1,0 +1,41 @@
+Software:
+        Exploit Kit:
+            Notes:
+                Hacks access into cluster with active firewall that is lower level than exploit kit.
+        Cracker:
+            Notes:
+                Hacks access, and gives cluster password, of server with encrypter that is lower level than cracker.
+                Get decryption code of file that is encrypted by crypter that is lower level than the cracker.
+                Penalty: Take (much) longer as penalty?
+                Penalty: When hacking, notify victim of hack in progress.
+        Firewall:
+            Notes:
+                Prevents access to cluster by use of exploit kit that is lower level than firewall.
+        Crypter:
+            Notes:
+                Prevents access to cluster by use of cracker that is lower level than Crypter.
+        Scanner:
+            Notes:
+                Gives cluster specs of cluster that user has access to.
+		Shows accesses to cluster that user has access to.
+                Shows proxy connections of a cluster.
+        Activators:
+            Collector Activator:
+                Notes:
+                    Gives money earned from Miner and Spam malwares.
+            DDoS Activator:
+                Notes:
+                    Allows user to launch DDoS attacks from DDoS malwares.
+            Proxy Activator:
+                Notes:
+                    Allows user to use clusters with proxy malwares as proxy server.
+        Miner Malware:
+            Notes:
+                Generates money based on CPU spec
+        Spam Malware:
+        DDoS Malware:
+        Proxy Malware:
+        Anti-Malware:
+            Notes:
+                Removes malware that is lower level than anti-malware.
+                Quickly remove malware with removal code.

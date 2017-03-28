@@ -1,7 +1,7 @@
-.software {
+.software-table {
     margin: auto;
     margin-top: 64px;
-    margin-bottom: 256px;
+    margin-bottom: 64px;
     border: 1px #ccc solid;
 }
 
@@ -9,53 +9,14 @@
     border: 1px #ccc solid;
 }
 
-.software-cell {
+.software-cell{
     border: 1px #ccc solid;
     padding: 8px;
+    text-align: right;
 }
 
-.software-cell-action {
-    display: inline-block;
+.software-action {
     margin-left: 8px;
     margin-right: 8px;
     padding: 8px;
-    position: relative;
-}
-
-.software-cell-action:hover {
-    background-color: #444;
-    cursor: pointer;
-}
-
-.software-cell-action:active {
-    background-color: #666;
-    cursor: pointer;
-}
-
-.software-cell-action-disabled {
-    display: inline-block;
-    margin-left: 8px;
-    margin-right: 8px;
-    padding: 8px;
-}
-
-.software-cell-action .software-cell-action-tooltip-text {
-    pointer-events: none;
-    visibility: hidden;
-    width: 100px;
-    background-color: #222;
-    color: #ccc;
-    text-align: center;
-    border: 1px #ccc solid;
-    padding: 5px 0;
-    position: absolute;
-    z-index: 2;
-    top: 100%;
-    left: 50%;
-    margin-left: -50px;
-    margin-top: 4px;
-}
-
-.software-cell-action:hover .software-cell-action-tooltip-text  {
-    visibility: visible;
 }

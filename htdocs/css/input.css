@@ -1,0 +1,55 @@
+.action, .action-disabled, .action-selected {
+    display: inline-block;
+    position: relative;
+}
+
+.action-selected {
+    background-color: #ccc;
+    color: #222;
+}
+
+.action, .action-selected {
+    cursor: pointer;
+}
+
+.action .action-tooltip {
+    pointer-events: none;
+    visibility: hidden;
+    width: 100px;
+    background-color: #222;
+    color: #ccc;
+    text-align: center;
+    border: 1px #ccc solid;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 2;
+    top: 100%;
+    left: 50%;
+    margin-left: -50px;
+    margin-top: 4px;
+}
+
+.action:hover .action-tooltip  {
+    visibility: visible;
+}
+
+.action:hover {
+    background-color: #444;
+}
+
+.action:active {
+    background-color: #666;
+}
+
+input[type="text"] {
+    height: 16px;
+    font-size: 16px;
+    font-family: 'Inconsolata';
+    background-color: #333;
+    border: 1px solid #ccc;
+    color: #ccc;
+}
+
+input[type="text"]:focus {
+    outline: none;
+}

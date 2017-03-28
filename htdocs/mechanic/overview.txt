@@ -1,0 +1,61 @@
+Overview:
+    Logs:
+        Anytime a cluster performs an action, or has an action performed on it, the log file will be changed to reflect that.
+        Log file cannot be encrypted.
+    Password File:
+        Each cluster has a password file that is encrypted automatically with the highest crypter.
+        If anyone gets the unencrypted password, they can use it to get access into servers.
+        Password file cannot be deleted.
+        Password file cannot be manually encrypted.
+    Banking:
+        The BIT$ bank will not be hackable.
+        Any bank accounts will not be hackable.
+        A player cannot change the bank account password.
+        A player can create a new bank account.
+    Database File:
+        The Database File contains the banking informations, malware removal codes, and decryptions code of the owner, and those that the owner imported from other databases.
+        The Database File is automatically encrypted with the highest crypter.
+        For all encryptions performed by the player, the decryption code will be in the database file.
+        If anyone gets the unencrypted database, they can import it into their own.
+        Database file cannot be deleted.
+        Database file cannot be manually encrypted.
+    Malware Installation:
+        When a player installs a malware, they will recieve a removal code that can be used to remove the malware.
+    Malware Removal:
+        A player can use a removal code to remove a malware of any level.
+        A player can use an anti-malware to remove a malware of level less than anti-malware.
+        A player can use an anti-malware with a removal code to quickly remove the malware of any level.
+    Encyption:
+        A player can encrypt a file, rendering it unusable, and recieving a decryption code using a crypter to be stored into the database.
+    Decryption:
+        A player can use a decryption code to invert the encryption, using a decryption code.
+        A decryption code can be cracked by a cracker.
+    Process tasking:
+        Each action will take time to prepare, and when done, the next action in queue will begin to prepare.
+        When an action, or process, is prepared, the player can choose to activate it.
+        Each cluster will have its own queue.
+    Internet:
+        Used to upload, download, scan, and crack.
+        Contributes to spam, proxy, and DDoS efficiency.
+    CPU:
+        Used to edit logs, delete, crack, exploit, encrypt, run, stop, remove malware.
+        Contributes to miner efficiency.
+    Memory:
+        Required to keep programs running.
+        If there is not enough memory, the programs requiring the most memory will be stopped automatically, until there is enough memory.
+    DDoS:
+        A DDoS attack will last some time.
+        A cluster that is being attacked by a DDoS will have all of its processes halted for the duration of the attack.
+        A cluster that is being attacked by a DDoS will have their internet capacity reduced for the duration of the attack.
+        A cluster that is being attacked by a DDoS will have their memory capacity reduced for the duration of the attack.
+        A cluster that is being attacked by a DDoS will not be able to reset IP for the duration of the attack.
+        A DDoS slave server that is used to launch a DDoS attack will not be able to be used for a DDoS for the duration of the attack, plus additional time.
+    Messaging:
+        A player can send anonymous messages to a the owner of a cluster with the IP address.
+        A player can send messages to a player with the username of that player.
+    Clan:
+        
+    Research:
+        Clan members will automatically contribute a fraction of their cluster capacity to the research.
+        Clan members will not lose any internet, CPU, or memory capacity from their contributions.
+        Research speed is directly proportion to amount of contribution.

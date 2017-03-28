@@ -14,22 +14,12 @@
     padding: 8px;
 }
 
-.process-cell-action {
+/*.process-cell-action {
     display: inline-block;
     margin-left: 8px;
     margin-right: 8px;
     padding: 8px;
     position: relative;
-}
-
-.process-cell-action:hover {
-    background-color: #444;
-    cursor: pointer;
-}
-
-.process-cell-action:active {
-    background-color: #666;
-    cursor: pointer;
 }
 
 .process-cell-action .cell-action-tooltip-text {
@@ -52,3 +42,4 @@
 .process-cell-action:hover .cell-action-tooltip-text {
     visibility: visible;
 }
+*/

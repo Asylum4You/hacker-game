@@ -1,0 +1,32 @@
+.menu {
+    background-color: #222;
+    border-bottom: 1px #ccc solid;
+    display: inline-block;
+    height: 50px;
+    justify-content: space-between;
+    text-align: center;
+    width: 100%;
+    display: flex;
+}
+.menu-option {
+    font-size: 18px;
+    margin-left: 16px;
+    margin-right: 16px;
+    padding: 16px;
+}
+
+.menu-edge {
+    margin-left: 16px;
+    margin-right: 16px;
+    padding: 16px;
+}
+
+.fixed {
+    position: fixed;
+    z-index: 1;
+    top: 0;
+}
+
+.container {
+    margin-top: 50px;
+}
